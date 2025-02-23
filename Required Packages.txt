@@ -1,0 +1,58 @@
+To run the provided text summarization code, you need to install the following Python packages:
+
+transformers: This library provides access to pre-trained models for various NLP tasks, including summarization.  It's the core package for this code.
+
+Bash
+
+pip install transformers
+Either tensorflow OR torch: The transformers library uses either TensorFlow or PyTorch as its backend. You need to install at least one of these deep learning frameworks.  It's your choice which one to use.
+
+TensorFlow (recommended if you need GPU support or are familiar with TensorFlow):
+
+Bash
+
+pip install tensorflow
+(For GPU support, install tensorflow-gpu and ensure you have the necessary CUDA drivers.)
+
+PyTorch (often considered easier to learn initially):
+
+Bash
+
+pip install torch torchvision torchaudio  # For CPU-only. Use the PyTorch website for GPU instructions.
+Important:  Go to the PyTorch website (https://pytorch.org/) and use their installation picker.  They will give you the exact command to run based on your operating system, CUDA version (if you have a GPU), and package manager (conda or pip). This is the recommended way to install PyTorch to ensure you get the correct version for your system.
+
+Optional Packages (but often useful):
+
+sentencepiece: Some summarization models, especially those based on T5, require the sentencepiece library. It's a good idea to install it to avoid potential issues:
+
+Bash
+
+pip install sentencepiece
+Complete Example (using PyTorch):
+
+If you choose PyTorch, here's a complete set of commands you would run in your terminal or command prompt:
+
+Bash
+
+pip install transformers
+pip install torch torchvision torchaudio  # Or the command from the PyTorch website if you have a GPU
+pip install sentencepiece  # Recommended
+After installation:
+
+Restart your Python kernel or IDE: If you are using a Jupyter Notebook, Google Colab, or an IDE, restart the kernel or IDE after installing the packages. This ensures that the changes are recognized.
+
+Verify Installation (optional but good practice): You can verify that the packages are installed correctly by running a short Python script:
+
+Python
+
+import transformers
+print(transformers.__version__)
+
+import torch
+print(torch.__version__)
+
+import sentencepiece
+print(sentencepiece.__version__)
+If you don't get any errors and see the version numbers printed, the installation was successful.
+
+By installing these packages, your text summarization code should run without the "At least one of TensorFlow 2.0 or PyTorch should be installed" error.  Remember to choose either TensorFlow or PyTorch and install only one of them unless you have a specific reason to install both.  Use the PyTorch website to get the correct installation command for PyTorch.
